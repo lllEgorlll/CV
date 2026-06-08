@@ -25,7 +25,7 @@ app = FastAPI(
 )
 
 # Инициализация компонентов
-detector = ATMFraudDetector(model_path="models/yolov8m_atm.pt", device="cpu")
+detector = ATMFraudDetector(model_path="yolov8m.pt", device="cpu")
 tracker = ObjectTracker()
 alert_system = AlertSystem(export_dir="data/export")
 
