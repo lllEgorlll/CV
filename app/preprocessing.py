@@ -6,6 +6,7 @@ import os
 from typing import Optional, Tuple
 
 
+
 def preprocess_frame(frame, enhance_contrast: bool = False, denoise: bool = False) -> np.ndarray:
     """
     Предобработка кадра для улучшения детекции

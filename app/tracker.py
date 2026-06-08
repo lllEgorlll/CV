@@ -2,6 +2,7 @@ from typing import List, Dict, Any, Optional
 import numpy as np
 
 
+
 class ObjectTracker:
     """Простой трекер объектов на основе IoU (Intersection over Union)"""
 

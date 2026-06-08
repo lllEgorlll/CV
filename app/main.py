@@ -7,6 +7,7 @@ from PIL import Image
 import numpy as np
 import tempfile
 import os
+
 import uvicorn
 import time
 from typing import Optional

@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 
 
+
 class AlertSystem:
     """Система оповещений для службы безопасности"""
 
