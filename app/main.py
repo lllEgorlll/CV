@@ -25,7 +25,9 @@ app = FastAPI(
 )
 
 # Инициализация компонентов
-detector = ATMFraudDetector(model_path="yolov8m.pt", device="cpu")
+#detector = ATMFraudDetector(model_path="yolov8m.pt", device="cpu")
+detector = ATMFraudDetector(model_path="models/atm_detector.pt", device="cpu")
+
 tracker = ObjectTracker()
 alert_system = AlertSystem(export_dir="data/export")
 
@@ -211,15 +213,9 @@ custom_css = """
 
 with gr.Blocks(css=custom_css, title="ATM Fraud Detection System") as demo:
     gr.Markdown("""
-    # 🏧 Система обнаружения подделок на банкоматах
+    # 🏧 Система обнаружения банкоматов
 
-    **Компьютерное зрение для выявления скиммеров, скрытых камер и других устройств взлома**
-
-    - 🔴 **Скиммеры** — накладки на кардридер
-    - 🟠 **Скрытые камеры** — для перехвата PIN-кода
-    - 🟡 **Накладные клавиатуры** — подмена штатной клавиатуры
-    - 🟣 **Trapping устройства** — блокировка выдачи денег/карт
-    - 🔵 **Подозрительные движения** — длительное нахождение, установка устройств
+    **Компьютерное зрение для выявления банкоматов на фото**
     """, elem_id="main_heading")
 
     with gr.Row():
@@ -304,9 +300,9 @@ with gr.Blocks(css=custom_css, title="ATM Fraud Detection System") as demo:
 
         ### Команда проекта
 
-        - Логунова Елизавета КИ23-12Б
-        - Игнатова Вероника КИ23-12Б
-        - Дронов Андрей КИ23-12Б
+        - Форкин Егор КИ23-12Б
+        - Гасников Данил КИ23-12Б
+        - Береза Иван КИ23-12Б
 
         ### Репозиторий
 
@@ -397,9 +393,7 @@ if __name__ == "__main__":
     print("Health check: http://localhost:8000/api/health")
     print("=" * 70)
     print("\nФУНКЦИИ MVP:")
-    print("  - Обнаружение скиммеров на кардридере")
-    print("  - Обнаружение скрытых камер")
-    print("  - Обнаружение накладных клавиатур")
+    print("  - Обнаружение банкоматов")
     print("  - Обнаружение trapping устройств")
     print("  - Обнаружение подозрительных движений")
     print("  - Цветовая визуализация bounding boxes")

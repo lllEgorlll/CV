@@ -9,34 +9,15 @@ from typing import List, Dict, Any, Optional
 
 # Цвета для визуализации по классам
 CLASS_COLORS = {
-    "skimmer_overlay": (255, 0, 0),  # Красный
-    "hidden_camera": (255, 165, 0),  # Оранжевый
-    "keypad_overlay": (255, 255, 0),  # Жёлтый
-    "cash_trapping": (128, 0, 128),  # Фиолетовый
-    "card_trapping": (255, 51, 153),  # Розовый
-    "suspicious_hand": (0, 102, 255),  # Синий
-    "card_reader": (0, 255, 0),  # Зелёный (штатный, не тревога)
+    "Bankomat": (255, 0, 0),
 }
 
 # Сопоставление ID классов с названиями
-CLASS_NAMES = {
-    0: "card_reader",
-    1: "skimmer_overlay",
-    2: "hidden_camera",
-    3: "keypad_overlay",
-    4: "cash_trapping",
-    5: "card_trapping",
-    6: "suspicious_hand",
-}
+CLASS_NAMES = {0: "Bankomat"}
 
 # Классы, которые считаются угрозами
 THREAT_CLASSES = {
-    "skimmer_overlay": "high",
-    "hidden_camera": "high",
-    "keypad_overlay": "high",
-    "cash_trapping": "medium",
-    "card_trapping": "medium",
-    "suspicious_hand": "low",
+    "Bankomat": "none",
 }
 
 
