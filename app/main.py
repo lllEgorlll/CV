@@ -306,7 +306,7 @@ with gr.Blocks(css=custom_css, title="ATM Fraud Detection System") as demo:
 
         ### Репозиторий
 
-        [github.com/VeronikaRaven/atm-fraud-detection](https://github.com/VeronikaRaven/atm-fraud-detection)
+        https://github.com/lllEgorlll/CV
         """)
 
     # Связываем кнопки с функциями
